@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mL3-FP-e2e">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu-->
+        <scene sceneID="rWx-Sw-hKr">
+            <objects>
+                <viewController title="Menu" id="mL3-FP-e2e" customClass="MenuViewController" customModule="CoordinatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YlJ-om-8L3"/>
+                        <viewControllerLayoutGuide type="bottom" id="9iZ-PT-t4i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8VP-BK-cci">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nch-jN-3Nt">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="q1z-ws-xBY">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q1z-ws-xBY" id="p3l-jN-Q2L">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="nch-jN-3Nt" id="TiG-aQ-Lr5"/>
+                        <segue destination="zdv-mh-5tz" kind="show" identifier="paymentSegue" id="hnq-4P-mj8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5N-k0-anJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354.39999999999998" y="89.505247376311857"/>
+        </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="qDV-tY-s7b">
+            <objects>
+                <viewController id="zdv-mh-5tz" customClass="PaymentViewController" customModule="CoordinatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rnL-cL-tcC"/>
+                        <viewControllerLayoutGuide type="bottom" id="k0u-qD-Ywx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qXK-Xx-CFa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6z-1W-aKN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="flF-WY-krf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBy-7H-qgl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Rhr-Kk-clC"/>
+                                </constraints>
+                                <state key="normal" title="buy">
+                                    <color key="titleColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buy:" destination="zdv-mh-5tz" eventType="touchUpInside" id="PM1-U0-jge"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="k6z-1W-aKN" secondAttribute="trailing" id="7J1-1H-XmM"/>
+                            <constraint firstItem="TBy-7H-qgl" firstAttribute="leading" secondItem="qXK-Xx-CFa" secondAttribute="leading" id="8wc-g6-6ub"/>
+                            <constraint firstItem="k0u-qD-Ywx" firstAttribute="top" secondItem="TBy-7H-qgl" secondAttribute="bottom" id="Cro-lP-EW3"/>
+                            <constraint firstItem="k6z-1W-aKN" firstAttribute="centerY" secondItem="qXK-Xx-CFa" secondAttribute="centerY" id="Lnx-Jx-vWd"/>
+                            <constraint firstAttribute="trailing" secondItem="TBy-7H-qgl" secondAttribute="trailing" id="gxB-Zp-C5O"/>
+                            <constraint firstItem="k6z-1W-aKN" firstAttribute="leading" secondItem="qXK-Xx-CFa" secondAttribute="leading" id="poF-yy-DnT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBuy" destination="TBy-7H-qgl" id="ja8-uS-z4r"/>
+                        <outlet property="labelMenuName" destination="k6z-1W-aKN" id="R8K-Nr-Noa"/>
+                        <outlet property="viewWarning" destination="8zH-2i-LVf" id="i2f-KW-h0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPt-6v-76f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="8zH-2i-LVf">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="226"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need to be logged to buy anything here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFj-WR-yjD">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="C7B-6L-BZg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="0.28235294119999998" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqF-Sd-int">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="M7t-68-hGj"/>
+                            </constraints>
+                            <state key="normal" title="login"/>
+                            <connections>
+                                <segue destination="FVq-UE-3M2" kind="presentation" identifier="loginSegue" id="OLs-lE-2PW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="fqF-Sd-int" secondAttribute="bottom" constant="20" id="CUz-pb-VTC"/>
+                        <constraint firstAttribute="trailing" secondItem="vFj-WR-yjD" secondAttribute="trailing" constant="16" id="MlZ-0X-h5y"/>
+                        <constraint firstItem="vFj-WR-yjD" firstAttribute="leading" secondItem="8zH-2i-LVf" secondAttribute="leading" constant="16" id="frd-5M-0f9"/>
+                        <constraint firstItem="vFj-WR-yjD" firstAttribute="centerY" secondItem="8zH-2i-LVf" secondAttribute="centerY" id="hPJ-Hr-WF8"/>
+                        <constraint firstAttribute="trailing" secondItem="fqF-Sd-int" secondAttribute="trailing" constant="16" id="hVy-CA-bQV"/>
+                        <constraint firstItem="fqF-Sd-int" firstAttribute="leading" secondItem="8zH-2i-LVf" secondAttribute="leading" constant="16" id="zaK-Io-PcV"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="485.60000000000002" y="89.505247376311857"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="8fW-cA-vYE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="FVq-UE-3M2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R9s-Rj-uwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="-276"/>
+        </scene>
+    </scenes>
+</document>

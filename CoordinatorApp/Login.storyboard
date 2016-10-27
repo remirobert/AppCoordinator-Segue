@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="t2y-OP-o3s">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="iMq-sr-Uyb">
+            <objects>
+                <viewController id="lhx-jd-voM" customClass="LoginViewController" customModule="CoordinatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Agb-vI-crJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZFe-cU-edT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8AK-wm-s5X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6tN-mO-i3b">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="q4f-t0-OzT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daF-ha-agv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7Ds-gL-Kgj"/>
+                                    <constraint firstAttribute="width" constant="45" id="fS0-KP-bas"/>
+                                </constraints>
+                                <state key="normal" title="OK"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="lhx-jd-voM" eventType="touchUpInside" id="5Ku-pm-bGg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6tN-mO-i3b" firstAttribute="top" secondItem="Agb-vI-crJ" secondAttribute="bottom" constant="15" id="91B-Rn-ZYg"/>
+                            <constraint firstItem="daF-ha-agv" firstAttribute="leading" secondItem="6tN-mO-i3b" secondAttribute="trailing" constant="8" id="KI8-7H-j4j"/>
+                            <constraint firstItem="daF-ha-agv" firstAttribute="top" secondItem="Agb-vI-crJ" secondAttribute="bottom" constant="15" id="SCm-c7-4eJ"/>
+                            <constraint firstItem="daF-ha-agv" firstAttribute="trailing" secondItem="8AK-wm-s5X" secondAttribute="trailingMargin" id="afV-xY-nOw"/>
+                            <constraint firstItem="6tN-mO-i3b" firstAttribute="leading" secondItem="8AK-wm-s5X" secondAttribute="leadingMargin" id="fXm-5X-ogo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="JWl-UW-0qS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="mIW-oE-0ij">
+                            <connections>
+                                <action selector="cancel:" destination="lhx-jd-voM" id="Ow5-Ht-pQp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textfieldUsername" destination="6tN-mO-i3b" id="ntB-ph-30t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmY-wL-xpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="92.203898050974516"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fQv-54-cPT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t2y-OP-o3s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iZW-0L-vXc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lhx-jd-voM" kind="relationship" relationship="rootViewController" id="7fM-5k-xJJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXi-ca-snt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280.80000000000001" y="92.203898050974516"/>
+        </scene>
+    </scenes>
+</document>
