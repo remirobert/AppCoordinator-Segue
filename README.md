@@ -1,6 +1,6 @@
 # AppCoordinator + Segue
 
-One the biggest issue we have when developping iOS application, is to handle the **navigation flow**.
+One of the biggest issue we have when developping iOS application, is to handle the **navigation flow**.
 
 This is not the controllers's job to create, and configure the others UIViewControllers in the flow. Not the right place. UIViewController has to many responsabilities, and at the final we got some massive view controllers, very hard to maintain.
 
