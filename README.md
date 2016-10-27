@@ -45,3 +45,19 @@ The controllers don't have to deal with `override func performSegue(withIdentifi
 #Example
 
 A very simple example projet was made to test the concept.
+
+This controller has 2 segues, one to login an user, the other one to display the menu.
+But it still pretty clean, because the magic is happening in the coordinator.
+```swift
+class WelcomeViewController: UIViewController, Coordinated {
+    
+    @IBOutlet weak var labelWelcomeBack: UILabel!
+    
+    weak var coordinationDelegate: CoordinationDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        (self.coordinationDelegate as? AppCoordinator)?.delegate = self
+    }
+}
+```
