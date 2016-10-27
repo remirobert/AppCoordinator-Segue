@@ -7,6 +7,8 @@ This is not the controllers's job to create, and configure the others UIViewCont
 So currently the navigation flow code doesn't have a home.
 Coordinator is an object that handle one or more controllers, and manage the flow (navigation) of the application. And it works with the storyboards segues. The controllers doesn't know nothing about the others. Coordinators handle navigation with others coordinator.
 
+![schema](https://cloud.githubusercontent.com/assets/3276768/19786695/88ba710e-9c9f-11e6-8a17-373df0358657.png)
+
 Advantage of the coordinators:
  - UIViewControllers are isolated from others, no link between them
  - High reseuability of the controllers, everywhere in the application, even with different presentation style
