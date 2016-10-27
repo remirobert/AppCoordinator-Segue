@@ -49,7 +49,7 @@ The controllers don't have to deal with `override func performSegue(withIdentifi
  - A very simple example projet was made to test the concept.
 
 This controller has 2 segues, one to login an user, the other one to display the menu.
-But it doesn't show any navigation code, because the magic is happening in the coordinator.
+But it doesn't implement any navigation code, because the magic is happening in the coordinator.
 ```swift
 class WelcomeViewController: UIViewController, Coordinated {
     
