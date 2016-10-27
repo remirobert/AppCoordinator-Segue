@@ -1,4 +1,4 @@
-# AppCoordinator-Segue
+# AppCoordinator + Segue
 
 One the biggest issue we have when developping iOS application, is too handle the navigation flow.
 
