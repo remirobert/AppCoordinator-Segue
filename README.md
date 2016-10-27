@@ -1,6 +1,6 @@
 # AppCoordinator + Segue
 
-One the biggest issue we have when developping iOS application, is too handle the navigation flow.
+One the biggest issue we have when developping iOS application, is too handle the **navigation flow**.
 
 This is not the controllers's job to create, and configure the others UIViewControllers in the flow. Not the right place. UIViewController has to many responsabilities, and at the final we got some massive view controllers, very hard to maintain.
 
@@ -10,12 +10,12 @@ Coordinator is an object that handle one or more controllers, and manage the flo
 ![schema](https://cloud.githubusercontent.com/assets/3276768/19786695/88ba710e-9c9f-11e6-8a17-373df0358657.png)
 
 Advantage of the coordinators:
- - UIViewControllers are isolated from others, no link between them
- - High reseuability of the controllers, everywhere in the application, even with different presentation style
- - Seasy to handle the communication between in the controllers (passe data)
+ - UIViewControllers are **isolated** from others, no link between them
+ - High **resealability** of the controllers, everywhere in the application, even with different presentation style
+ - Easy to handle the **communication** between in the controllers (passe data)
  - Better logic in the code, one coordinator for one purpose
- - Lighter UIViewController
- - Fully compatible with segue and storyboard, so keep using it 🎉
+ - **Lighter** UIViewController
+ - Fully **compatible with segue and storyboard**, so keep using it 🎉
  
 #Coordinator
 
