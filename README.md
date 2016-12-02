@@ -12,10 +12,10 @@ Coordinator is an object that handle one or more controllers, and manage the flo
 Advantage of the coordinators:
  - UIViewControllers are **isolated** from others, no link between them
  - High **resealability** of the controllers, everywhere in the application, even with different presentation style
- - Easy to handle the **communication** between in the controllers (passe data)
+ - Easy to handle the **communication** between the controllers (data flow)
  - Better logic in the code, one coordinator for one purpose
- - **Lighter** UIViewController
- - Fully **compatible with segue and storyboard**, so keep using it 🎉
+ - **Lighter** UIViewController, avoiding the massive UIViewController is our priority
+ - Fully **compatible with segue and storyboard**, so keep using it 🎉 because it's great, and storyboards, and like a documentation in my point of view
  
 #Coordinator
 
