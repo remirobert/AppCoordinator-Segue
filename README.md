@@ -16,6 +16,7 @@ Advantage of the coordinators:
  - Better logic in the code, one coordinator for one purpose
  - **Lighter** UIViewController, avoiding the massive UIViewController is our priority
  - Fully **compatible with segue and storyboard**, so keep using it 🎉 because it's great, and storyboards, and like a documentation in my point of view
+ - Can be used in the **VIPER** architecture, because storyboards is tricky to use with this architecture
  
 #Coordinator
 
